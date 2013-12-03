@@ -1,0 +1,1292 @@
+.ui-resizable { position: relative;}
+.ui-resizable-handle { position: absolute;font-size: 0.1px; display: block; }
+.ui-resizable-disabled .ui-resizable-handle, .ui-resizable-autohide .ui-resizable-handle { display: none; }
+.ui-resizable-n { cursor: n-resize; height: 7px; width: 100%; top: -5px; left: 0; }
+.ui-resizable-s { cursor: s-resize; height: 7px; width: 100%; bottom: -5px; left: 0; }
+.ui-resizable-e { cursor: e-resize; width: 7px; right: -5px; top: 0; height: 100%; }
+.ui-resizable-w { cursor: w-resize; width: 7px; left: -5px; top: 0; height: 100%; }
+.ui-resizable-se { cursor: se-resize; width: 12px; height: 12px; right: 1px; bottom: 1px; }
+.ui-resizable-sw { cursor: sw-resize; width: 9px; height: 9px; left: -5px; bottom: -5px; }
+.ui-resizable-nw { cursor: nw-resize; width: 9px; height: 9px; left: -5px; top: -5px; }
+.ui-resizable-ne { cursor: ne-resize; width: 9px; height: 9px; right: -5px; top: -5px;}
+.ui-dialog .ui-resizable-se { width: 14px; height: 14px; right: 3px; bottom: 3px; }
+.x-head{
+	position: absolute;
+top: 8px;
+left: -4px;
+width: 40px;
+height: 14px;
+background-size: auto 14px;
+background-position: center center;
+background-repeat: no-repeat;
+overflow: hidden;
+}
+#ttx-tag-menu{
+	width: 140px;
+	z-index: 9999;
+	position: absolute;
+	opacity: .5 !important;
+	background: #444 !important;
+}
+
+#ttx-tag-menu-scrollable{
+	overflow-y: auto;
+	
+}
+#ttx-tag-menu-scrollable > * {
+	overflow: hidden;
+}
+.songs.tagging .song{
+	cursor: pointer !important;
+}
+.songs.tagging .goBottom{
+	display: none !important;
+}
+.songs.tagging .playlist-go-top{
+	display: none !important;
+}
+.songs.tagging .playlist-open-options{
+	display: none !important;
+}
+#ttx-tag-menu input{
+	position:absolute;
+	padding-left: 8px;
+	left: 8px;
+	border-radius: 12px;
+	border: none;
+	right:28px;
+	top: 8px;
+	bottom: 8px;
+	width: auto;
+	height: auto;
+	background-color: #eee;
+	color: #888;
+	box-shadow: inset 0 0 0 1px #333,0 1px 0 0 #777;
+}
+#ttx-tag-menu input:focus{
+	outline: none;
+	
+}
+#ttx-tag-menu:hover, .song:hover #ttx-tag-menu{
+	opacity: 1 !important;
+}
+#ttx-close-tags {
+	opacity: 0.5;
+	width: 17px;
+	height: 17px;
+	position: absolute;
+	right: 6px;
+	top: 12px;
+	background: url(https://s3.amazonaws.com/static.turntable.fm/images/playlist/queue-icons.png) 0px -17px;
+}
+#ttx-close-tags:hover{
+	opacity: 1;
+}
+#ttx-tag-menu .special{
+	text-align: center;
+	overflow: hidden;
+	box-shadow: none !important;
+	-webkit-box-shadow: none !important;
+	-moz-box-shadow: none !important;
+}
+#ttx-tag-menu .special:hover{
+	background: #222;
+}
+#ttx-tag-menu .option.selected{
+	background: #E8C632;
+	font-weight: bold !important;
+	color: #664F18 !important;
+}
+#ttx-tag-menu .option.selected:hover{
+	background: -moz-linear-gradient(top,#F0DB58 0,#E7C745 100%) !important;
+	background: -webkit-linear-gradient(top,#F0DB58 0,#E7C745 100%) !important;
+}
+#ttx-tag-menu-arrow{
+	display: block;
+	position: absolute;
+    background-image: none;
+    right: -8px;
+    top: 50%;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-right: none;
+    border-left: 10px solid #444;
+}
+#playlist .song .goBottom, #playlist .song .addTag {
+	position: absolute;
+	width: 17px;
+	height: 17px;
+	cursor: pointer;
+	display: none;
+	opacity: .5;
+}
+#playlist .song .goBottom{
+	right: 5px;
+	bottom: 5px;
+	background: url(http://turntablex.com/images/queue_down.png) 0 0px;
+}
+#playlist .song .addTag{
+	right: 25px;
+	top: 5px;
+	border-radius: 8px;
+	background-color: black;
+}
+#playlist .song .addTag:hover, #playlist .song.selected .addTag, #playlist .song.set .addTag{
+	background-color: #E8C632;
+}
+#playlist .song.selected .addTag{
+	display: block !important;
+}
+#playlist .song.set .addTag{
+	display: block !important;
+}
+#playlist .song .addTag:after{
+	content: '';
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	height: 17px;
+	width: 17px;
+	background: url(http://turntablex.com/images/tag.png) 0 0px;
+}
+#playlist .song.selected .addTag:after{
+	content: '';
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	height: 17px;
+	width: 17px;
+	background: url(http://turntablex.com/images/tag.png) 0 0px;
+}
+.playlist-open-options:after{
+	content: '';
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	height: 17px;
+	width: 17px;
+	background: url(http://turntablex.com/images/window_icons_inverted.png) -1px -19px;
+}
+.playlist-open-options{
+    background: #000 !important;
+    border-radius: 9px;
+    opacity: 0.5;
+
+}
+.playlist-open-options:hover{
+    opacity: 1;
+}
+.playlist-go-top{
+	background: url(https://s3.amazonaws.com/static.turntable.fm/images/playlist/queue-icons.png) 0px 17px !important;
+	opacity: .5;
+	width: 17px !important;
+	height: 17px !important;
+}
+.playlist-go-top:hover {
+	opacity: 1;
+}
+#playlist .song .playlist-open-options{
+	right: 25px !important;
+}
+#playlist .song.set .details, #playlist .song.set .title{
+	right: 46px;
+}
+#playlist .song .addTag:hover:after, #playlist .song.set .addTag:after{
+	content: '';
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	height: 17px;
+	width: 17px;
+	background: url(http://turntablex.com/images/tag_dark.png) 0 0px;
+}
+
+#playlist .song.selected {
+	background-color: #050505;
+}
+#playlist .song.set .title, #playlist .song.set .details, #playlist .tagging .song .title, #playlist .tagging .song .details {
+	right: 46px;
+}
+#playlist .song.batch .addTag, #playlist .song.batch .goBottom{
+	display: none !important;
+}
+#playlist .song .goBottom:hover, #playlist .song .goBottom:active, #playlist .song .addTag:hover, #playlist .song .addTag:active, #playlist .songs.tagging .song:hover .addTag {
+	opacity: 1;
+}
+#playlist .songs.tagging .song.selected .addTag{
+	opacity: .9;
+	background-color: #0081b4;
+}
+#playlist .songs.tagging .song .addTag{
+	display: block;
+	width: 22px;
+	height:22px;
+	border-radius: 10px;
+	top: 13px;
+}
+
+#playlist .songs.tagging .song .addTag:after{
+	content: '';
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	height: 22px;
+	width: 22px;
+	background: url(http://turntablex.com/images/tag.png) no-repeat 2px 2px;
+}
+
+#playlist .songs.tagging .song.set .addTag:after{
+	content: '';
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	height: 22px;
+	width: 22px;
+	background: url(http://turntablex.com/images/tag_dark.png) no-repeat 2px 2px;
+}
+#playlist .songs.tagging .song.selected .addTag:after{
+	content: '';
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	height: 22px;
+	width: 22px;
+	background: url(http://turntablex.com/images/tag.png) no-repeat 2px 2px;
+}
+#playlist .songs.tagging .song .addTag:hover:after{
+	content: '';
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	height: 17px;
+	width: 17px;
+	background: url(http://turntablex.com/images/tag_dark.png) 2px 2px;
+}
+#playlist .songs.tagging .song.selected .addTag:hover:after{
+	content: '';
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	height: 22px;
+	width: 22px;
+	background: url(http://turntablex.com/images/tag.png) no-repeat 2px 2px;
+}
+#playlist .song:hover .goBottom, #playlist .song:hover .addTag{
+	display: block;
+}
+#playlist .song:hover .addTag.selected{
+	opacity: 1;
+}
+
+#chat .message.notification{
+	background-color: #BAEBFE;
+}
+
+.isIdle .guest-avatar{
+	-webkit-filter: grayscale(100%) !important;
+}
+.isIdle .guestName{
+	color: #777 !important;
+	font-style: italic !important;
+}
+
+#ttx-stats-bar{
+	position: relative;
+	display: inline-block;
+	text-overflow: ellipsis;
+	height: 35px;
+}
+#ttx-stats-bar-sub{
+	position: absolute;
+	top: 16px;
+	left: 0px;
+}
+.ttx-stats-count{
+	width: 15px;
+	margin-right: 5px;
+	display: inline-block;
+	text-align: right;
+}
+.ttx-stats-count.zero{
+	color: #999;
+}
+#ttx-stats-title{
+	margin-left: 10px;
+}
+#ttx-stats-artist{
+	margin-left: 10px;
+	color: #999;
+	font-size: 11px;
+}
+#ttx-settings-button{
+	width: 40px;
+	height: 30px;
+	border-radius: 4px;
+	box-shadow: inset 0 0 0 1px black,inset 0 2px 0 0 rgba(255, 255, 255, 0.1),0 1px 0 0 rgba(255, 255, 255, 0.1);
+}
+#ttx-settings-button .settings-head{
+	left: -6px;
+}
+#ttx-settings-button::after{
+	content: '';
+	position: absolute;
+	width: 11px;
+	height: 7px;
+	right: 6px;
+	top: 13px;
+	background: url(https://s3.amazonaws.com/static.turntable.fm/images/room/header-button-sprite.png) -25px -77px no-repeat;
+}
+.hover #ttx-settings-button::after {
+	background-position: -25px -84px;
+}
+.hover #ttx-settings-button{
+	background: #282828;
+	background: -moz-linear-gradient(top,#222 0,#333 100%);
+	background: -webkit-gradient(linear,left top,left bottom,color-stop(0%,#222),color-stop(100%,#333));
+	background: -webkit-linear-gradient(top,#222 0,#333 100%);
+	background: -o-linear-gradient(top,#222 0,#333 100%);
+	background: -ms-linear-gradient(top,#222 0,#333 100%);
+	background: linear-gradient(to bottom,#222 0,#333 100%);
+	box-shadow: inset 0 0 0 1px black,0 1px 0 0 rgba(255, 255, 255, 0.2);
+
+}
+#ttx-settings-dropdown{
+	display:none;
+
+	position: absolute;
+	top: 34px;
+	left: 50%;
+	width: 130px;
+	margin-left: -69px;
+}
+.hover #ttx-settings-dropdown{
+	display:block;
+}
+#ttx-settings-menu{
+	position:absolute;
+	left: 100px;
+        z-index: 5;
+	width: 40px;
+	margin-left: -20px;
+	top: 50%;
+	margin-top: -15px;
+	height:30px;
+	width: 40px;
+}
+.ttx-import{
+	
+	box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.1),inset 0 1px 2px #FFEF5B;
+	background: #E8C632;
+	background: -webkit-gradient(linear,left top,left bottom,color-stop(0%,#E8C632),color-stop(100%,#D8A126));
+	border: 1px solid black;
+	
+	text-shadow: 0 1px 1px #F0D194;
+	padding-top:5px;
+	padding-bottom:4px;
+	line-height:15px;
+	color: #664F18;
+	font-weight:bold;
+	position:relative;
+	height: auto;
+	width: auto;
+	padding-left:25px;
+	cursor: pointer;
+	padding-right:10px;
+	text-align:left;
+
+	border-radius: 4px;
+	
+	font-size: 13px;
+}
+.ttx-import.imported{
+	border-top: 1px solid #aaa;
+	color: #333;
+	border-bottom: 1px solid #222222;
+	text-shadow:none;
+	background-image: -webkit-linear-gradient(top, #999 0px, #777 100%);
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	box-shadow: rgba(255, 255, 255, 0.247059) 0px 1px 0px 0px inset, #222 0px -1px 0px 0px inset;
+	border-right-style: solid;
+	border-right-width: 1px;
+	border-right-color: #444;
+	cursor:default;
+}
+.ttx-import.imported:hover{
+	background: -webkit-linear-gradient(top, #999 0px, #777 100%) !important;
+}
+.ttx-import:hover{
+	background: -webkit-linear-gradient(top,#F0DB58 0,#E7C745 100%) !important;
+}
+.ttx-import::after{
+	content:'';
+	position:absolute;
+	width:22px;
+	height:22px;
+	top:0px;
+	left:0px;
+	background-size:22px 22px;
+	background-image: url(http://turntablex.com/images/laptop_icon.png);
+}
+#ttx-dock-menu{
+    position: absolute;
+    top: 34px;
+    z-index:10;
+    left: 50%;
+    width: 60px;
+
+    margin-left: -34px;
+    display: none;
+}
+.hover #ttx-dock-menu{
+    display:block;
+}
+.ttx-panel{
+	z-index: 3 !important;
+}
+.ttx-panel.hidden{
+	display:none;
+}
+.ttx-panel.float{
+	z-index: 5 !important;
+}
+#ttx-dock{
+    width:30px;
+    height:30px;
+    border-radius: 4px;
+	color: #664F18;
+    box-shadow: inset 0 0 0 1px black, inset 0 2px 0 0 rgba(255,255,255,0.1),0 1px 0 0 rgba(255,255,255,0.1);
+	background: -moz-linear-gradient(top,#E8C632 0,#D8A126 100%);
+	background: -webkit-linear-gradient(top,#E8C632 0,#D8A126 100%);
+}
+#ttx-dock:hover{
+    background: -moz-linear-gradient(top,#0081B4 0,#0099AA 100%);
+    background: -webkit-gradient(linear,left top,left bottom,color-stop(0%,#0081B4),color-stop(100%,#0099AA));
+    background: -webkit-linear-gradient(top,#0081B4 0,#0099AA 100%);
+	color: white;
+}
+#ttx-dock-{
+    position: absolute;
+    top: 50%;
+    left: 125px;
+    height:30px;
+    width: 30px;
+    margin-top: -15px;
+    z-index:10;
+}
+
+#ttx-dock.empty{
+	background: inherit;
+	color: black;
+}
+#ttx-dock.empty:hover{
+    background: -moz-linear-gradient(top,#0081B4 0,#0099AA 100%);
+    background: -webkit-gradient(linear,left top,left bottom,color-stop(0%,#0081B4),color-stop(100%,#0099AA));
+    background: -webkit-linear-gradient(top,#0081B4 0,#0099AA 100%);
+	color: white;
+}
+.ttx-dock-count{
+    display:inline-block;
+    text-align:center;
+    width:100%;
+    line-height:30px;
+}
+.ttx-dock-count.hover{
+    color: #FFFFFF;
+    font-weight:bold;
+}
+.ttx-panel.ttx-panel-focus .floating-panel-tab{
+	background: -moz-linear-gradient(top,#E8C632 0,#D8A126 100%) !important;
+	background: -webkit-linear-gradient(top,#E8C632 0,#D8A126 100%) !important;
+    border-left: solid 1px #E5C456;
+}
+.ttx-panel.ttx-panel-focus .floating-panel-tab:hover{
+	background: -moz-linear-gradient(top,#E8C632 0,#D8A126 100%) !important;
+	background: -webkit-linear-gradient(top,#E8C632 0,#D8A126 100%) !important;
+
+}
+.ttx-panel .floating-panel-tab:hover{
+	background: -moz-linear-gradient(top,#BBBBBB 0,#999999) !important;
+	background: -webkit-gradient(linear,left top,left bottom,color-stop(0%,#BBBBBB),color-stop(100%,#999999)) !important;
+    background: -webkit-linear-gradient(top,#BBBBBB 0,#999999 100%) !important;
+}
+.ttx-panel h2{
+	color: #222222 !important;
+}
+.ttx-panel.ttx-panel-focus{
+	z-index: 4 !important;
+}
+.ttx-panel .ttx-controls-dock{
+	display:inline-block;
+	height: 20px;
+	cursor:pointer !important;
+
+	margin-top: 9px;
+	border-radius: 3px;
+	margin-right:2px;
+	background-image:url(https://s3.amazonaws.com/static.turntable.fm/images/pm/window_icons.png);
+	background-position: -45px 1px;
+	width: 20px;
+	background-size: auto;
+
+}
+.ttx-panel.float .ttx-controls-dock{
+	background-position: -20px 58px !important;
+}
+.ttx-panel .ttx-controls-minimize{
+	display: inline-block;
+	border-radius: 3px;
+	cursor:pointer !important;
+	height: 20px;
+	margin-right:3px;
+	background-repeat:no-repeat;
+	margin-top: 9px;
+	background-image:url(http://turntablex.com/images/minus.png);
+	background-position: 2px 2px;
+	background-size: 16px 16px;
+	width: 20px;
+
+}
+.ttx-panel .ttx-controls-minimize:hover, .ttx-panel .ttx-controls-dock:hover{
+	background-color: #cccccc;
+
+}
+.ttx-panel .ttx-controls-minimize:active, .ttx-panel .ttx-controls-dock:active{
+	background-color: #06B8F0 !important;
+}
+
+.ttx-panel.ttx-panel-focus .ttx-controls-minimize:hover, .ttx-panel.ttx-panel-focus .ttx-controls-dock:hover{
+	background-color: #FFEF5B;
+}
+
+.ttx-panel .ttx-controls{
+	position:absolute;
+	right:10px;
+	top:0px;
+	height:36px;
+}
+
+.placeholder{
+    height: 1px;
+    float: left;
+    padding-left: 3px;
+    position:relative;
+}
+.ttx-panel button.back {
+	display: block;
+	position: absolute;
+	top: 50%;
+	left: 5px;
+	margin-top: -15px;
+	overflow: hidden;
+	text-indent: -9999px;
+	width: 56px;
+	height: 30px;
+	border: 0;
+	cursor: pointer;
+	background: url(https://s3.amazonaws.com/static.turntable.fm/images/room/button_sprite.png) -33px 0 no-repeat;
+}
+
+
+
+.ttx-panel a:hover, .message a:hover{
+	color: #0091E4;
+}
+.ttx-panel a:visited, .message a:visited{
+	color: #D39859;
+}
+.ttx-panel a, .message a{
+	color: #0081B4;
+}
+
+.ttx-panel button.back:hover{
+	background-position-y: -30px; 
+}
+.guestIdle{
+	color: #888;
+}
+.ttx-panel .isCurrentDJ .guestIdle{
+	color: black;
+}
+.ttx-chat-timer {
+	color: #888;
+}
+.ttx-panel .guest.isCurrentDJ {
+		background-color: rgb(213, 181, 3) !important;
+		color: black !important;
+}
+.ttx-panel .guest.isCurrentDJ:hover{
+	
+	background-color: #F0D438 !important;
+}
+.hover #ttx-laptop-menu, .hover #ttx-laptop-speed-menu, .hover #ttx-autodj-menu{
+	display: block;
+}
+#ttx-laptop-menu-scrollable{
+	
+	background-color: #777;
+	
+}
+#ttx-laptop-menu-scrollable ul {
+	overflow-y: auto;
+	
+}
+#ttx-laptop-menu.fix{
+	display: block !important;
+	visibility: hidden !important;
+}
+#ttx-laptop-menu {
+	display: none;
+	position: absolute;
+	top: 34px;
+	left: 50%;
+	margin-left: -72px;
+	width: 140px;
+	
+	
+	font-size: small;
+	font-family: Helvetica,Arial,sans-serif;
+}
+#ttx-laptop-speed-menu{
+	display:none;
+	position: absolute;
+	top: 34px;
+	left: 50%;
+	height: 111px;
+	width: 12px;
+	margin-left: -10px;
+}
+#ttx-laptop-speed-slider{
+	background: #333;
+	position: absolute;
+	top: 5px;
+	left: 50%;
+	height: 107px;
+	width: 6px;
+	margin-left: -3px;
+	border-radius: 3px;
+	box-shadow: 0 0 0 1px black,0 1px 0 1px rgba(255, 255, 255, 0.4),inset 0 1px 5px black;
+}
+#ttx-autodj-slider{
+	background: #333;
+	position: absolute;
+	top: 5px;
+	left: 50%;
+	height: 107px;
+	width: 6px;
+	margin-left: -3px;
+	border-radius: 3px;
+	box-shadow: 0 0 0 1px black,0 1px 0 1px rgba(255, 255, 255, 0.4),inset 0 1px 5px black;
+}
+#ttx-laptop-speed-knob{
+	cursor: pointer;
+	position: absolute;
+	top: 10px;
+	left: 50%;
+	width: 14px;
+	margin-left: -7px;
+	height: 14px;
+	margin-top: -7px;
+	border-radius: 7px;
+	background: white;
+	z-index: 30001;
+	box-shadow: 0 1px 1px 0 black;
+	background: #CCC;
+	background: -moz-linear-gradient(top,#F4F4F4 0,#AAA 100%);
+	background: -webkit-gradient(linear,left top,left bottom,color-stop(0%,#F4F4F4),color-stop(100%,#AAA));
+	background: -webkit-linear-gradient(top,#F4F4F4 0,#AAA 100%);
+	background: -o-linear-gradient(top,#F4F4F4 0,#AAA 100%);
+	background: -ms-linear-gradient(top,#F4F4F4 0,#AAA 100%);
+	background: linear-gradient(to bottom,#F4F4F4 0,#AAA 100%);
+}
+#ttx-autodj-knob{
+	cursor: pointer;
+	position: absolute;
+	top: 10px;
+	left: 50%;
+	width: 14px;
+	margin-left: -7px;
+	height: 14px;
+	margin-top: -7px;
+	border-radius: 7px;
+	background: white;
+	z-index: 30001;
+	box-shadow: 0 1px 1px 0 black;
+	background: #CCC;
+	background: -moz-linear-gradient(top,#F4F4F4 0,#AAA 100%);
+	background: -webkit-gradient(linear,left top,left bottom,color-stop(0%,#F4F4F4),color-stop(100%,#AAA));
+	background: -webkit-linear-gradient(top,#F4F4F4 0,#AAA 100%);
+	background: -o-linear-gradient(top,#F4F4F4 0,#AAA 100%);
+	background: -ms-linear-gradient(top,#F4F4F4 0,#AAA 100%);
+	background: linear-gradient(to bottom,#F4F4F4 0,#AAA 100%);
+}
+#ttx-laptop-speed-knob::before{
+	content: '';
+	position: absolute;
+	top: 3px;
+	left: 3px;
+	width: 8px;
+	height: 8px;
+	border-radius: 4px;
+	background: #AAA;
+	background: -moz-linear-gradient(top,#4C4C4C 0,white 100%);
+	background: -webkit-gradient(linear,left top,left bottom,color-stop(0%,#4C4C4C),color-stop(100%,white));
+	background: -webkit-linear-gradient(top,#4C4C4C 0,white 100%);
+	background: -o-linear-gradient(top,#4C4C4C 0,white 100%);
+	background: -ms-linear-gradient(top,#4C4C4C 0,white 100%);
+	background: linear-gradient(to bottom,#4C4C4C 0,white 100%);
+}
+#ttx-autodj-knob::before{
+	content: '';
+	position: absolute;
+	top: 3px;
+	left: 3px;
+	width: 8px;
+	height: 8px;
+	border-radius: 4px;
+	background: #AAA;
+	background: -moz-linear-gradient(top,#4C4C4C 0,white 100%);
+	background: -webkit-gradient(linear,left top,left bottom,color-stop(0%,#4C4C4C),color-stop(100%,white));
+	background: -webkit-linear-gradient(top,#4C4C4C 0,white 100%);
+	background: -o-linear-gradient(top,#4C4C4C 0,white 100%);
+	background: -ms-linear-gradient(top,#4C4C4C 0,white 100%);
+	background: linear-gradient(to bottom,#4C4C4C 0,white 100%);
+}
+#ttx-laptop-speed-fill{
+	background: #0081B4;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	border-radius: 3px;
+	border-top-right-radius: 3px;
+	border-top-left-radius: 3px;
+	border-bottom-left-radius: 3px;
+	border-bottom-right-radius: 3px;
+	box-shadow: inset 0 1px 3px 1px #00599C;
+}
+#ttx-autodj-fill{
+	background: #0081B4;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	border-radius: 3px;
+	border-top-right-radius: 3px;
+	border-top-left-radius: 3px;
+	border-bottom-left-radius: 3px;
+	border-bottom-right-radius: 3px;
+	box-shadow: inset 0 1px 3px 1px #00599C;
+}
+#ttx-laptop-speed-knob::after{
+	content: '';
+	position: absolute;
+	top: 4px;
+	left: 4px;
+	width: 6px;
+	height: 6px;
+	border-radius: 3px;
+	background: #0081B4;
+	box-shadow: inset 0 1px 3px 1px #00599C;
+}
+#ttx-autodj-knob::after{
+	content: '';
+	position: absolute;
+	top: 4px;
+	left: 4px;
+	width: 6px;
+	height: 6px;
+	border-radius: 3px;
+	background: #0081B4;
+	box-shadow: inset 0 1px 3px 1px #00599C;
+}
+#ttx-laptop-menu-container.active #ttx-laptop-menu-button, #ttx-laptop-menu-container.active #ttx-laptop-speed-button, #ttx-autobop-button.active, #ttx-autodj-button.active, #ttx-laptop-sync-button.active{
+	background: -moz-linear-gradient(top,#E8C632 0,#D8A126 100%) !important;
+	background: -webkit-linear-gradient(top,#E8C632 0,#D8A126 100%) !important;
+	cursor: pointer;
+}
+.ttx-tooltip{
+	position: relative;
+}
+
+.ttx-tooltip .tipsy-inner{
+	color: white;
+    max-width: 200px;
+    text-align: center;
+    background-color: #333;
+    padding: 4px 6px;
+    border-top: 1px solid #000;
+    box-shadow: inset 0px 1px 0px 0px #454545;
+    white-space: nowrap;
+    font-size: 12px;
+    border-radius: 4px;
+}
+.ttx-tooltip .tipsy-n .tipsy-inner{
+	border-top: none !important;
+	border-bottom: 1px solid #000 !important;
+	box-shadow: inset 0px -1px 0px 0px #454545 !important;
+}
+.ttx-tooltip .tipsy-arrow{
+	position: absolute;
+    width: 0;
+    height: 0;
+    bottom: 0;
+    left: 50%;
+    border-top: 5px solid #000;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+}
+.ttx-tooltip .tipsy-n{
+	margin-left: -2px !important;
+	margin-top: -5px !important;
+}
+.ttx-tooltip .tipsy-n .tipsy-arrow{
+	display: block;
+    background-image: none !important;
+    border-top: none;
+    border-bottom: 5px solid #333;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+}
+.ttx-tooltip .tipsy-w{
+	margin-left: -5px !important;
+	margin-top: -1px !important;
+}
+
+.ttx-tooltip .tipsy-w .tipsy-arrow{
+	display: block;
+    background-image: none;
+    top: 50%;
+    left: 0px;
+    margin-top: -2px;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-right:  5px solid #333;
+    border-left: none;
+}
+#ttx-laptop-menu-container.active #ttx-laptop-menu-button:hover, #ttx-laptop-menu-container.active #ttx-laptop-speed-button:hover, #ttx-autobop-button.active:hover, #ttx-autodj-button.active:hover, #ttx-laptop-sync-button.active:hover{
+	background: -moz-linear-gradient(top,#F0DB58 0,#E7C745 100%) !important;
+	background: -webkit-linear-gradient(top,#F0DB58 0,#E7C745 100%) !important;
+}
+#ttx-laptop-speed-label{
+	position: absolute;
+	bottom: -13px;
+	left: 2px;
+	font-size: 9px;
+	color: #222;
+	cursor:pointer;
+	font-weight: bold;
+	right: 2px;
+	text-align: center;
+}
+#ttx-autodj-label{
+	position: absolute;
+	bottom: -14px;
+	left: 2px;
+	font-size: 9px;
+	color: #222;
+	font-weight: bold;
+	right: 2px;
+	cursor:pointer;
+	text-align: center;
+}
+#ttx-laptop-speed-button::before{
+	content: '';
+	position: absolute;
+	width: 16px;
+	height: 16px;
+	left: 6px;
+	top: 6px;
+	background: url(http://turntablex.com/images/speed_icon.png) 0px 0px no-repeat;
+}
+#ttx-autodj-button{
+	cursor:pointer;
+}
+#ttx-autobop-button{
+	cursor:pointer;
+}
+#ttx-autodj-button::before{
+	content: '';
+	position: absolute;
+	width: 16px;
+	height: 16px;
+	left: 6px;
+	top: 2px;
+	background: url(http://turntablex.com/images/record.png) 0px 0px no-repeat;
+}
+#ttx-laptop-sync-button{
+	cursor:pointer;
+}
+#ttx-laptop-sync-button::before{
+	content: '';
+	position: absolute;
+	width: 16px;
+	height: 16px;
+	left: 7px;
+	top: 7px;
+	background: url(http://turntablex.com/images/clock.png) 0px 0px no-repeat;
+}
+#ttx-autobop-button::before{
+	content: '';
+	position: absolute;
+	width: 16px;
+	height: 16px;
+	left: 7px;
+	top: 6px;
+	background: url(http://turntablex.com/images/up_black.png) 0px 0px no-repeat;
+}
+#ttx-laptop-speed-button.reverse::before{
+	content: '';
+	position: absolute;
+	width: 16px;
+	height: 16px;
+	left: 6px;
+	top: 6px;
+	background: url(http://turntablex.com/images/speed_icon_reversed.png) 0px 0px no-repeat;
+}
+
+#ttx-laptop-menu-button::before{
+	content: '';
+	position: absolute;
+	width: 19px;
+	height: 15px;
+	left: 6px;
+	top: 8px;
+	background: url(http://turntablex.com/images/laptop_icon.png) -7px -9px no-repeat;
+}
+#ttx-laptop-menu-container{
+	left: 305px;
+        z-index: 5;
+}
+
+
+#ttx-light-switch{
+	cursor: pointer;
+	border-radius: 4px;
+
+}
+#ttx-light-switch.active{
+	background: -webkit-linear-gradient(top,#E8C632 0,#D8A126 100%) !important;
+}
+#ttx-light-switch.active:hover{
+	background: -webkit-linear-gradient(top,#F0D438 0,#DBA928 100%) !important;
+}
+#ttx-light-switch.active::before{
+	content: '' !important;
+	position: absolute !important;
+	width: 30px !important;
+	height: 30px !important;
+	left: 0px !important;
+	top: 0px !important;
+	background: url(https://raw.github.com/DubbyTT/Auto-Awexomer/master/images/lightbulb4.png) 0px 0px no-repeat !important;
+	background-size: contain !important;
+}
+#ttx-light-switch::before{
+	content: '';
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	left: 0px;
+	top: 0px;
+	background: url(https://raw.github.com/DubbyTT/Auto-Awexomer/master/images/lightbulb2.png) 0px 0px no-repeat;
+	background-size: contain;
+
+}
+.ttx-menu-item {
+	position: relative;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	max-height: 15px;
+        line-height: 15px;
+	white-space: nowrap;
+}
+.ttx-menu-item.selected{
+	background: -moz-linear-gradient(top,#E8C632 0,#D8A126 100%) !important;
+	background: -webkit-linear-gradient(top,#E8C632 0,#D8A126 100%) !important;
+	font-weight: bold !important;
+	color: #664F18 !important;
+}
+.ttx-menu-item.selected:hover{
+	background: -moz-linear-gradient(top,#F0DB58 0,#E7C745 100%) !important;
+	background: -webkit-linear-gradient(top,#F0DB58 0,#E7C745 100%) !important;
+}
+.ttx-menu-item.selected .ttx-menu-copy-container:hover, .ttx-menu-item.selected .ttx-menu-edit:hover{
+	background-color: #F3FFB3;
+}
+
+
+.ttx-menu-edit{
+	position: absolute;
+	top: 50%;
+	margin-top: -10px;
+	right: 5px;
+	width: 12px;
+	height: 12px;
+	padding: 4px;
+	background: url(https://s3.amazonaws.com/static.turntable.fm/images/pm/window_icons.png);
+	background-repeat: no-repeat;
+	background-position: 0px -18px;
+	border-radius: 3px;
+	visibility: hidden;
+}
+
+.ttx-menu-edit:hover, .ttx-menu-copy-container:hover{
+	background-color: #06B8F0;
+}
+.ttx-menu-edit:active{
+	background-color: #FFEE58 !important;
+}
+.ttx-menu-copy-container{
+	position:absolute;
+	top:50%;
+	height:20px;
+	margin-top:-10px;
+	width:20px;
+	right:25px;
+	border-radius: 3px;
+}
+
+.ttx-menu-container{
+	position:relative;
+	width:20px;
+	height:20px;
+
+}
+.ttx-menu-copy{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	background-image: url(http://turntablex.com/images/clipboard.png);
+	background-position: 3px 3px;
+	background-size: 14px 14px;
+	background-repeat: no-repeat;
+	visibility: hidden;
+	border-radius: 3px;
+}
+.ttx-menu-copy.active{
+	background-color: #FFEE58;
+}
+.ttx-menu-item:hover .ttx-menu-edit, .ttx-menu-item:hover .ttx-menu-copy{
+	visibility: visible;
+}
+.ttx-menu-text{
+	margin-top: 1px;
+	margin-left: 30px;
+	width: 98px;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+#ttx-laptop-scroll-left{
+	position: absolute;
+	width: 45px;
+	height: 46px;
+	
+	left: 265px;
+	background-image: url('https://s3.amazonaws.com/static.turntable.fm/roommanager_assets/props/left_arrow_sprite.png');
+}
+#ttx-laptop-scroll-right{
+	position: absolute;
+	width: 45px;
+	height: 46px;
+	
+	right: 256px;
+	background-image: url('https://s3.amazonaws.com/static.turntable.fm/roommanager_assets/props/right_arrow_sprite.png');
+}
+#ttx-laptop-copy{
+	position: absolute;
+	width: 45px;
+	height: 46px;
+	
+	right: 115px;
+	background-image: url(http://turntablex.com/images/modal_copy.png);
+}
+#ttx-laptop-paste{
+	position:absolute;
+	width: 45px;
+	height: 46px;
+	
+	right: 65px;
+	background-image: url(http://turntablex.com/images/modal_paste.png);
+}
+#ttx-laptop-cut{
+	position: absolute;
+	width: 45px;
+	height: 46px;
+	
+	left: 5px;
+	background-image: url(http://turntablex.com/images/modal_cut.png);
+}
+#ttx-laptop-end{
+	position: absolute;
+	width: 45px;
+	height: 46px;
+
+	right: 206px;
+	background-image: url(http://turntablex.com/images/modal_end.png);
+}
+#ttx-laptop-preview{
+	float: left;
+	position:relative;
+	margin-left: 5px;
+	width: 45px;
+	height: 46px;
+	background-image: url(http://turntablex.com/images/modal_play.png);
+}
+#ttx-laptop-preview.stop{
+	background-image: url(http://turntablex.com/images/modal_stop.png);
+}
+#ttx-laptop-save{
+	float: left;
+	position:relative;
+	margin-left: 5px;
+	width: 45px;
+	height: 46px;
+	background-image: url(http://turntablex.com/images/modal_save.png);
+}
+#ttx-laptop-delete{
+	float: left;
+	position:relative;
+	margin-left: 5px;
+	width: 45px;
+	height: 46px;
+	background-image: url(http://turntablex.com/images/modal_delete.png);
+}
+#ttx-laptop-start{
+	position: absolute;
+	width: 45px;
+	height: 46px;
+	
+	left: 215px;
+	background-image: url(http://turntablex.com/images/modal_start.png);
+}
+#ttx-laptop-insert{
+	position: absolute;
+	width: 45px;
+	height: 46px;
+	
+	right: 15px;
+	background-image: url(http://turntablex.com/images/modal_insert.png);
+}
+.ttx-laptop-editor-button{
+	z-index: 999;
+	top:0px;
+	background-position: 0px 0px;
+	background-repeat: no-repeat;
+}
+
+
+.ttx-laptop-editor-button:hover{
+	cursor: pointer;
+	background-position-y: -46px;
+}
+.ttx-laptop-editor-button.inactive:hover{
+	cursor: default;
+	background-position-y: 0px;
+}
+.ttx-laptop-editor-button.inactive{
+	opacity: .5;
+}
+#ttx-auto-buttons{
+	left: 238px;
+}
+#ttx-autodj-menu{
+	display:none;
+	position: absolute;
+	top: 34px;
+	left: 50%;
+	height: 111px;
+	width: 12px;
+	margin-left: -10px;
+}
+
+
+::-webkit-scrollbar {
+    background: transparent;
+}
+::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    border: none;
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(0, 0, 0, 0.45);
+
+	border: none;
+}
+#ttx-custom-container{
+    margin-top: 25px;
+    margin-left: 20px;
+}
+#ttx-custom-avatar-picker{
+    width: 660px;
+    height: 400px;
+    position: relative;
+}
+#ttx-custom-laptop-picker{
+    width: 660px;
+    height: 200px;
+    position: relative;
+}
+.ttx-scroll-left{
+    position: absolute;
+    top: 50%;
+    margin-top: -23px;
+    left: -5px;
+    width: 45px;
+    height: 46px;
+    background-image: url('https://s3.amazonaws.com/static.turntable.fm/roommanager_assets/props/left_arrow_sprite.png');
+}
+.ttx-scroll-right{
+    position: absolute;
+    top: 50%;
+    margin-top: -23px;
+    right: -5px;
+    width: 45px;
+    height: 46px;
+    background-image: url('https://s3.amazonaws.com/static.turntable.fm/roommanager_assets/props/right_arrow_sprite.png');
+}
+.ttx-scroll-left.inactive, .ttx-scroll-right.inactive{
+	display: none;
+}
+.ttx-scroller{
+    position: absolute;
+    overflow: hidden;
+    left: 45px;
+    right: 45px;
+    top: 40px;
+    bottom: 40px;
+}
+.ttx-scroll-list{
+	position: relative;
+	transition: left .3s;
+}
+.ttx-laptop-item{
+	position: relative;
+    height: 120px;
+    width: 114px;
+    display: inline-block;
+}
+.ttx-laptop-item.selected, .ttx-avatar-item.selected{
+	box-shadow: inset 0px 0px 0px 2px #E8C632;
+	box-shadow: inset 0px 0px 0px 2px #E8C632;
+	border-radius: 20px;
+}
+.ttx-locked{
+	position: absolute;
+	z-index: 10;
+	left: 50%;
+	top: 50%;
+	display: block;
+	margin-left: -20px;
+	margin-top: -25px;
+}
+.ttx-avatar-item{
+	position: relative;
+    height: 320px;
+    width: 190px;
+    display: inline-block;
+}
+#ttx-custom-laptop-picker-selection, #ttx-custom-avatar-picker-selection{
+	color: rgb(255, 209, 6);
+}

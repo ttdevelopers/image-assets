@@ -1,0 +1,68 @@
+
+::-webkit-scrollbar-button {
+   width: 0px;
+   height:0px;
+}
+
+::-webkit-scrollbar:vertical {
+    background: transparent; /* -webkit-linear-gradient(left, #525252 0%,#202020 50%,#020202 50%,#101010 100%); /* Chrome10+,Safari5.1+ 
+    background: linear-gradient(left, #525252 0%,#202020 50%,#020202 50%,#101010 100%); /* W3C */
+}
+
+::-webkit-scrollbar:horizontal {
+    background: transparent; /* -webkit-linear-gradient(top, #525252 0%,#202020 50%,#020202 50%,#101010 100%); /* Chrome10+,Safari5.1+ 
+    background: linear-gradient(top, #525252 0%,#202020 50%,#020202 50%,#101010 100%); /* W3C */
+}
+
+::-webkit-scrollbar-track:vertical {
+    background: transparent; /* -webkit-linear-gradient(left, #1d1d1d 0%,#1b1b1b 50%,#171717 50%,#1d1d1d 100%); /* Chrome10+,Safari5.1+ 
+    background: transparent;linear-gradient(left, #1d1d1d 0%,#1b1b1b 50%,#171717 50%,#1d1d1d 100%); /* W3C */
+    border-radius: 15px;
+}
+
+::-webkit-scrollbar-track:horizontal {
+    background: transparent; /*-webkit-linear-gradient(top, #1d1d1d 0%,#1b1b1b 50%,#171717 50%,#1d1d1d 100%); /* Chrome10+,Safari5.1+ 
+    background: linear-gradient(top, #1d1d1d 0%,#1b1b1b 50%,#171717 50%,#1d1d1d 100%); /* W3C */
+    border-radius: 15px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 15px;
+    border: 1px solid black;
+}
+
+::-webkit-scrollbar-thumb:vertical {
+    background: -webkit-linear-gradient(left, #878787 0%,#474747 50%,#282828 50%,#4a4a4a 100%); /* Chrome10+,Safari5.1+ */
+    background: linear-gradient(left, #878787 0%,#474747 50%,#282828 50%,#4a4a4a 100%); /* W3C */
+}
+
+::-webkit-scrollbar-thumb:horizontal {
+    background: -webkit-linear-gradient(top, #878787 0%,#474747 50%,#282828 50%,#4a4a4a 100%); /* Chrome10+,Safari5.1+ */
+    background: linear-gradient(top, #878787 0%,#474747 50%,#282828 50%,#4a4a4a 100%); /* W3C */
+}
+
+::-webkit-scrollbar-thumb:hover {
+}
+
+::-webkit-scrollbar-corner {
+    background: black;
+}
+
+::-webkit-scrollbar-button:vertical {
+    background: -webkit-linear-gradient(left, #525252 0%,#202020 50%,#020202 50%,#101010 100%); /* Chrome10+,Safari5.1+ */
+    background: linear-gradient(left, #525252 0%,#202020 50%,#020202 50%,#101010 100%); /* W3C */
+}
+
+::-webkit-scrollbar-button:horizontal {
+    background: -webkit-linear-gradient(top, #525252 0%,#202020 50%,#020202 50%,#101010 100%); /* Chrome10+,Safari5.1+ */
+    background: linear-gradient(top, #525252 0%,#202020 50%,#020202 50%,#101010 100%); /* W3C */
+}
+
+
+#ttx-tag-menu input{
+    background-color: #151515 !important;
+    color: #EEE !important;
+}
+#chat .message.notification{
+    background-color: rgb(6, 27, 54) !important;
+}
